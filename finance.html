@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Services - CommUnity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+        .top-bar {
+            background-color: #89ABE3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .logo img {
+            height: 200px;
+            
+        }
+        .header {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .location-input {
+            padding: 5px;
+        }
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: 1px solid #EA738D;
+            background-color: #EA738D;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .auth-buttons button:hover {
+            background-color: #d06276;
+            border-color: #d06276;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+        }
+        .search-box .search-icon {
+            margin-right: 10px;
+        }
+        .category-section {
+            padding: 20px;
+        }
+        .category-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .category-section .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .category-section .card img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+        .category-section .card h3 {
+            margin-top: 0;
+        }
+        .category-section .card p {
+            margin: 5px 0 0 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footer p {
+            line-height: 1.6;
+        }
+        .footer .columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 0 10px;
+            min-width: 200px;
+        }
+        .footer .newsletter {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer .newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 60%;
+            margin-right: 10px;
+        }
+        .footer .newsletter button {
+            padding: 10px 20px;
+            border: 1px solid #EA738D;
+            background-color: #EA738D;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer .newsletter button:hover {
+            background-color: #d06276;
+            border-color: #d06276;
+        }
+        .service-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .service-box img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+        .service-box h3 {
+            margin: 0;
+        }
+        .service-box p {
+            margin: 5px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="C:\Users\Administrator\Downloads\community_logo_white-removebg-preview.png" alt="Logo">
+        </div>
+    </div>
+    <div class="header">
+        <input type="text" class="location-input" placeholder="Enter your location">
+        <div class="auth-buttons">
+            <button>Login</button>
+            <button>Sign Up</button>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search finance services" />
+        </div>
+    </div>
+
+    <div class="category-section">
+        <h2>Finance Services</h2>
+        <div class="card">
+            <img src="path/to/banking-icon.png" alt="Banking Icon">
+            <div>
+                <h3>Banking</h3>
+                <p>Access a variety of banking services including savings accounts, loans, and more.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="path/to/tax-icon.png" alt="Tax Icon">
+            <div>
+                <h3>Tax Services</h3>
+                <p>Find assistance with tax filing, consultations, and other related services.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="path/to/insurance-icon.png" alt="Insurance Icon">
+            <div>
+                <h3>Insurance</h3>
+                <p>Explore various insurance options for health, life, property, and more.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="path/to/financial-planning-icon.png" alt="Financial Planning Icon">
+            <div>
+                <h3>Financial Planning</h3>
+                <p>Get help with managing your finances, investments, retirement planning, and more.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Explore More</h2>
+        <div class="columns">
+            <div class="column">
+                <h3>Investment Opportunities</h3>
+                <p>Discover various investment options and opportunities to grow your wealth.</p>
+            </div>
+            <div class="column">
+                <h3>Customer Testimonials</h3>
+                <p>Read reviews and testimonials from our satisfied clients.</p>
+            </div>
+            <div class="column">
+                <h3>Finance Tips & Guides</h3>
+                <p>Access helpful tips and guides to better manage your finances.</p>
+            </div>
+            <div class="column">
+                <h3>Exclusive Offers</h3>
+                <p>Check out the latest exclusive offers and promotions on our services.</p>
+            </div>
+            <div class="column">
+                <h3>Partner Organizations</h3>
+                <p>Learn more about our partner organizations and affiliates.</p>
+            </div>
+        </div>
+        <div class="newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay updated with the latest news and offers from CommUnity.</p>
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+        </div>
+    </div>
+</body>
+</html>

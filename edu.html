@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Services - CommUnity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f2f5;
+        }
+        .top-bar {
+            background-color: #89ABE3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .logo img {
+            height: 150px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .location-input {
+            padding: 5px;
+        }
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: 1px solid #EA738D;
+            background-color: #EA738D;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .auth-buttons button:hover {
+            background-color: #d06276;
+            border-color: #d06276;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+        }
+        .search-box .search-icon {
+            margin-right: 10px;
+        }
+        .category-section {
+            padding: 20px;
+        }
+        .category-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .category-section .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease;
+        }
+        .category-section .card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .category-section .card h3 {
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .footer p {
+            line-height: 1.6;
+            text-align: center;
+        }
+        .footer .columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer .column {
+            flex: 1;
+            margin: 0 10px;
+            min-width: 200px;
+            text-align: center;
+        }
+        .footer .newsletter {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer .newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 60%;
+            margin-right: 10px;
+        }
+        .footer .newsletter button {
+            padding: 10px 20px;
+            border: 1px solid #EA738D;
+            background-color: #EA738D;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer .newsletter button:hover {
+            background-color: #d06276;
+            border-color: #d06276;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 30%;
+            margin: 15px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card p {
+            margin: 10px 0;
+        }
+        .card button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #89ABE3;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #6f8eb9;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="C:\Users\Administrator\Downloads\community_logo_white-removebg-preview.png" alt="Logo">
+        </div>
+    </div>
+    <div class="header">
+        <input type="text" class="location-input" placeholder="Enter your location">
+        <div class="auth-buttons">
+            <button>Login</button>
+            <button>Sign Up</button>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search education services" />
+        </div>
+    </div>
+
+    <div class="category-section">
+        <h2>Explore Our Education Services</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Learning Materials</h3>
+                <p>Access a variety of learning materials including books, articles, videos, and more to enhance your knowledge.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <h3>Online Mentors</h3>
+                <p>Connect with experienced online mentors who can guide you in your educational journey.</p>
+                <button>Find a Mentor</button>
+            </div>
+            <div class="card">
+                <h3>Students</h3>
+                <p>Join a community of students, participate in group studies, and exchange knowledge.</p>
+                <button>Join Now</button>
+            </div>
+            <div class="card">
+                <h3>Teachers</h3>
+                <p>Find experienced teachers for one-on-one sessions or classroom learning.</p>
+                <button>Discover Teachers</button>
+            </div>
+            <div class="card">
+                <h3>Workshops & Seminars</h3>
+                <p>Attend workshops and seminars to gain practical knowledge and skills.</p>
+                <button>View Schedule</button>
+            </div>
+            <div class="card">
+                <h3>Certification Courses</h3>
+                <p>Enroll in certification courses to boost your career and validate your skills.</p>
+                <button>Start Learning</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Stay Connected</h2>
+        <div class="columns">
+            <div class="column">
+                <h3>About Us</h3>
+                <p>Learn more about our mission to provide quality education services to everyone.</p>
+            </div>
+            <div class="column">
+                <h3>Contact Us</h3>
+                <p>Have questions? Get in touch with our support team for assistance.</p>
+            </div>
+            <div class="column">
+                <h3>Blog</h3>
+                <p>Read our latest articles on education, learning tips, and more.</p>
+            </div>
+            <div class="column">
+                <h3>Careers</h3>
+                <p>Join our team and help us make a difference in the education sector.</p>
+            </div>
+            <div class="column">
+                <h3>Terms & Policies</h3>
+                <p>Read our terms and policies to know more about our services.</p>
+            </div>
+        </div>
+        <div class="newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay updated with the latest news and offers from CommUnity.</p>
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+        </div>
+    </div>
+</body>
+</html>
+

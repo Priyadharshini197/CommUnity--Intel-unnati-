@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommUnity</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+    <header>
+        <img src="logo-white-removebg-preview.png" alt="CommUnity Logo" class="logo">
+        <h1>Welcome to CommUnity</h1>
+    </header>
+<main>
+    <section id="home">
+        <center>
+            <h2>Select Your Role</h2>
+            <button class="role-btn" onclick="showForm('serviceUser')">Service User</button>
+            <button class="role-btn" onclick="showForm('serviceProvider')">Service Provider</button>
+        </center>
+    </section>
+
+    <!-- Service User Registration Form -->
+    <section id="serviceUser-form" class="hidden">
+        <h2>Service User Registration</h2>
+        <form id="serviceUserRegistrationForm">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" name="userEmail" required>
+
+            <label for="userPhone">Phone:</label>
+            <input type="tel" id="userPhone" name="userPhone" required>
+
+            <label for="userPassword">Create Password:</label>
+            <input type="password" id="userPassword" name="userPassword" required>
+
+            <label for="userConfirmPassword">Confirm Password:</label>
+            <input type="password" id="userConfirmPassword" name="userConfirmPassword" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required oninput="fetchPlaces('country')">
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required oninput="fetchPlaces('state')">
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required oninput="fetchPlaces('district')">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required oninput="fetchPlaces('city')">
+
+            <div class="captcha">
+                <label for="captcha">Captcha:</label>
+                <input type="text" id="captcha" name="captcha" placeholder="I'm not a robot" required>
+            </div>
+            <center>
+                <button type="submit" class="submit-btn">Register</button>
+            </center>
+        </form>
+        <center>
+            <p>Or continue with:</p>
+            <button class="social-login" onclick="socialLogin('google')">Google</button><br>
+            <button class="social-login" onclick="socialLogin('facebook')">Facebook</button><br>
+            <button class="social-login" onclick="socialLogin('microsoft')">Microsoft</button><br>
+            <button class="social-login" onclick="socialLogin('apple')">Apple</button>
+
+            <p>Already have an account? <a href="#" onclick="showLoginForm('serviceUser')">Sign In</a></p>
+            <p><a href="#" onclick="showSignUpForm()">Maybe Later</a></p>
+        </center>
+    </section>
+
+    <!-- Service Provider Registration Form -->
+    <section id="serviceProvider-form" class="hidden">
+        <h2>Service Provider Registration</h2>
+        <form id="serviceProviderRegistrationForm">
+            <label for="providerName">Name:</label>
+            <input type="text" id="providerName" name="providerName" required>
+            
+            <label for="providerEmail">Email:</label>
+            <input type="email" id="providerEmail" name="providerEmail" required>
+
+            <label for="providerPhone">Phone:</label>
+            <input type="tel" id="providerPhone" name="providerPhone" required>
+
+            <label for="providerPassword">Create Password:</label>
+            <input type="password" id="providerPassword" name="providerPassword" required>
+
+            <label for="providerConfirmPassword">Confirm Password:</label>
+            <input type="password" id="providerConfirmPassword" name="providerConfirmPassword" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required oninput="fetchPlaces('country')">
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required oninput="fetchPlaces('state')">
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required oninput="fetchPlaces('district')">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required oninput="fetchPlaces('city')">
+
+            <label for="modeOfService">Mode of Service:</label>
+            <select id="modeOfService" name="modeOfService" required>
+                <option value="health">Health</option>
+                <option value="education">Education</option>
+                <option value="transport">Transport</option>
+                <option value="finance">Finance</option>
+            </select>
+
+            <div id="serviceDetails">
+                <!-- Additional dropdowns will be shown based on the selected mode of service -->
+            </div>
+
+            <div class="captcha">
+                <label for="captcha">Captcha:</label>
+                <input type="text" id="captcha" name="captcha" placeholder="I'm not a robot" required>
+            </div>
+            <center>
+                <button type="submit" class="submit-btn">Register</button>
+            </center>
+        </form>
+        <center>
+            <p>Or continue with:</p>
+            <button class="social-login" onclick="socialLogin('google')">Google</button><br>
+            <button class="social-login" onclick="socialLogin('facebook')">Facebook</button><br>
+            <button class="social-login" onclick="socialLogin('microsoft')">Microsoft</button><br>
+            <button class="social-login" onclick="socialLogin('apple')">Apple</button><br>
+
+            <p>Already have an account? <a href="#" onclick="showLoginForm('serviceProvider')">Sign In</a></p>
+        </center>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login-form" class="hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <center>
+                <button type="submit" class="submit-btn">Login</button>
+            </center>
+        </form>
+        <center>
+            <p>Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a></p>
+        </center>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 CommUnity</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
